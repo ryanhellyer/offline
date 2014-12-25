@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Offline
-Plugin URI: http://geek.ryanhellyer.net/products/offline/
+Plugin URI: https://geek.hellyer.kiwi/products/offline/
 Description: Offline
 Author: Ryan Hellyer
 Version: 1.0
-Author URI: http://geek.ryanhellyer.net/
+Author URI: https://geek.hellyer.kiwi/
 
 Copyright (c) 2014 Ryan Hellyer
 
