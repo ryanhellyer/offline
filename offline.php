@@ -114,7 +114,7 @@ class Offline_Cache {
 	public function buffer_manifest() {
 
 		// Don't bother caching logged in users
-		if ( is_user_logged_in() ) {
+		if ( is_user_logged_in() || isset( $_GET['manifest'] ) ) {
 			return;
 		}
 
