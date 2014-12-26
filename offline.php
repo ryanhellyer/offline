@@ -4,7 +4,7 @@ Plugin Name: Offline
 Plugin URI: https://geek.hellyer.kiwi/products/offline/
 Description: Offline
 Author: Ryan Hellyer
-Version: 1.0
+Version: 1.0.1
 Author URI: https://geek.hellyer.kiwi/
 
 Copyright (c) 2014 Ryan Hellyer
@@ -135,7 +135,7 @@ class Offline_Cache {
 
 		// Obtain all URLs which need cached
 		$doc = new DOMDocument();
-		$doc->loadHTML( $content ); //helps if html is well formed and has proper use of html entities!
+		@$doc->loadHTML( $content ); // This throws non-stop errors if you give it bad HTML. Due to this problem, I decided to suppress all of these errors. If you can guarantee that only good HTML is sent to the parser, then you could remove the "@" symbol, but most sites do have a sloppy HTML, so this is kinda necessary unfortunately.
 		$xpath = new DOMXpath( $doc );
 
 		$tags = array(
