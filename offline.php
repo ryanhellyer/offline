@@ -4,7 +4,7 @@ Plugin Name: Offline
 Plugin URI: https://geek.hellyer.kiwi/products/offline/
 Description: Offline
 Author: Ryan Hellyer
-Version: 1.0.1
+Version: 1.0.2
 Author URI: https://geek.hellyer.kiwi/
 
 Copyright (c) 2014 Ryan Hellyer
@@ -97,11 +97,7 @@ class Offline_Cache {
 		}
 		$url .= '://';
 
-		if ( $_SERVER['SERVER_PORT'] != '80' ) {
-			$url .= $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . $_SERVER['REQUEST_URI'];
-		} else {
-			$url .= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		}
+		$url .= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
 		return $url;
 	}

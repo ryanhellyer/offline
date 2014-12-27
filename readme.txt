@@ -4,7 +4,7 @@ Tags: offline, cache, manifest, caching, html5, appcache, manifest-cache
 Donate link: https://geek.hellyer.kiwi/donate/
 Requires at least: 4.1
 Tested up to: 4.2
-Stable tag: 1.0
+Stable tag: 1.0.2
 
 
 Modern browsers include offline caching functionality. The Offline cache plugin for WordPress allows you to easily implement this.
@@ -59,6 +59,8 @@ No, I'm too busy. Having said that, if you are willing to pay me a small fortune
 == Changelog ==
 
 Version 1.0: Initial release (25/12/2014)<br />
+Version 1.0.1: Bug fixes (26/12/2014)<br />
+Version 1.0.2: Bug fixes (27/12/2014)<br />
 
 
 = Credits =
