@@ -2,9 +2,9 @@
 Contributors: ryanhellyer
 Tags: offline, cache, manifest, caching, html5, appcache, manifest-cache
 Donate link: https://geek.hellyer.kiwi/donate/
-Requires at least: 4.1
-Tested up to: 4.2
-Stable tag: 1.0.2
+Requires at least: 4.7
+Tested up to: 4.9
+Stable tag: 2.0
 
 
 Modern browsers include offline caching functionality. The Offline cache plugin for WordPress allows you to easily implement this.
@@ -26,6 +26,18 @@ After you've downloaded and extracted the files:
 1. Upload the complete 'offline' folder to the '/wp-content/plugins/' directory OR install via the plugin installer
 2. Activate the plugin through the 'Plugins' menu in WordPress
 4. And yer done!
+
+If you would like every publicly visible page or post (doesn't include archives) to be cached whenever someone visits any page on your site, please add the following to your <code>wp-config.php</code> file <code>define( 'OFFLINE_CACHE_EVERYTHING', true );</code>.
+
+Support for Application Cache is deprecated on insecure origins, so you should use https.
+
+Note that the plugin does not cache files which are referenced within other files. So for example, images referenced within CSS or JS files do not get cached. There is a filter <code>offline_cache</code> which can be used for adding additional files if necessary (requires some coding knowledge to use).
+
+Server must be able to do http request to itself.
+
+This plugin will only cache the first 100 pages it finds.
+
+Logged in users are never cached. To cache a page, the user must log out of WordPress first.
 
 Visit the <a href="https://geek.hellyer.kiwi/products/offline/">Offline Plugin page</a> for more information, or checkout <a href="http://offline-demo.hellyer.kiwi/">the offline demo</a>.
 
@@ -61,6 +73,8 @@ No, I'm too busy. Having said that, if you are willing to pay me a small fortune
 Version 1.0: Initial release (25/12/2014)<br />
 Version 1.0.1: Bug fixes (26/12/2014)<br />
 Version 1.0.2: Bug fixes (27/12/2014)<br />
+Version 1.1: Ignoring wp-json links and security hardening (25/01/2017)<br />
+Version 2.0: Caching whole site instead of individual pages (01/02/2017)<br />
 
 
 = Credits =
